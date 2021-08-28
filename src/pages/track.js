@@ -27,10 +27,10 @@ export const GET_TRACK = gql`
   }
 `;
 
-const Track = (props) => {
+const Track = ({ id }) => {
   const { loading, data, error } = useQuery(GET_TRACK, {
     variables: {
-      trackId: props.trackId,
+      trackId: id,
     },
   });
 
